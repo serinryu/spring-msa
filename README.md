@@ -1,6 +1,7 @@
 # Spring MSA demo project 
 
-Key-word : Service Discovery in a Microservices Architecture
+- **Key-word** : Service Discovery in a Microservices Architecture
+- **Required Knowledge** : https://github.com/serinryu/spring-msa/wiki/Service-Discovery-in-MSA-(feat.-Eureka-Server)
 
 ## 🥞 Project Objective
 
