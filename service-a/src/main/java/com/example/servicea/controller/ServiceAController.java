@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/service1")
+@RequestMapping("/serviceA")
 public class ServiceAController {
 
     @Autowired
@@ -23,10 +23,8 @@ public class ServiceAController {
 
     public String callServiceA() throws UnsupportedOperationException, IOException {
         ResponseEntity<String> res;
-        String apiPath = "/service2/statuscheck";
+        String apiPath = "/serviceB/statuscheck";
         res = restTemplate.getForEntity("http://" + SERVICE_B_NAME + apiPath, String.class); // Ribbon을 통해 서비스끼리 Eureka에 등록된 서비스명으로 호출이 가능하다.
-
-
 
         return "Service-A: inst001 호출" + " > " + res.getBody().toString();
 
